@@ -1,18 +1,24 @@
-package by.aveleshko.jpa.idgen.table;
+package by.aveleshko.jpa.idgen.entities;
 
-import jakarta.persistence.Basic;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 import jakarta.persistence.TableGenerator;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 
+/**
+ * Product entity.
+ * 
+ * This entity demonstrates the TABLE ID generation strategy.
+ */
 @Entity
-@TableGenerator(name = "key_generator",
-                table = "key_gen",
+@Table(name = "products")
+@TableGenerator(name = "table_generator",
+                table = "next_id_table",
                 pkColumnName = "entity_name",
                 pkColumnValue = "products",
                 valueColumnName = "next_id",
@@ -20,16 +26,17 @@ import java.time.LocalDate;
                 allocationSize = 10)
 public class Product {
     @Id
-    @GeneratedValue(strategy = GenerationType.TABLE, generator = "key_generator")
+    @GeneratedValue(strategy = GenerationType.TABLE, generator = "table_generator")
     private int id;
     
-    @Basic(optional = false)
+    // There is also @Basic(optional = true),
+    // but it's just a scheme generation hint.
+    @Column(nullable = false)
     private String name;
     
-    @Basic(optional = false)
+    @Column(nullable = false)
     private BigDecimal price;
     
-    // optional is a hint, nullable is not?
     @Column(name = "expiration_date", nullable = false)
     private LocalDate expirationDate;
 

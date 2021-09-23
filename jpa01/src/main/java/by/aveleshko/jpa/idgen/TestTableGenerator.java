@@ -1,12 +1,13 @@
-package by.aveleshko.jpa.idgen.table;
+package by.aveleshko.jpa.idgen;
 
+import by.aveleshko.jpa.idgen.entities.Product;
 import by.aveleshko.jpaunit.JPAUnit;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.time.Month;
 import java.util.Arrays;
 
-public class Test {
+public class TestTableGenerator {
 
     public static void main(String[] args) {
         var product1 = new Product();
@@ -26,7 +27,7 @@ public class Test {
         
         var products = new Product[]{ product1, product2, product3 };
         
-        try (var unit = new JPAUnit("test-unit")) {
+        try (var unit = new JPAUnit("postgres-unit")) {
             unit.runTransaction(entityManager -> {
                 Arrays.stream(products).forEach(entityManager::persist);
             });
