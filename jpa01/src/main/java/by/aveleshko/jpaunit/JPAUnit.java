@@ -1,4 +1,4 @@
-package by.aveleshko.jpa01.jpaunit;
+package by.aveleshko.jpaunit;
 
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;

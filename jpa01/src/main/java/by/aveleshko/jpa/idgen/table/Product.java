@@ -1,4 +1,4 @@
-package by.aveleshko.jpa01.entities;
+package by.aveleshko.jpa.idgen.table;
 
 import jakarta.persistence.Basic;
 import jakarta.persistence.Column;
@@ -11,14 +11,16 @@ import java.math.BigDecimal;
 import java.time.LocalDate;
 
 @Entity
+@TableGenerator(name = "key_generator",
+                table = "key_gen",
+                pkColumnName = "entity_name",
+                pkColumnValue = "products",
+                valueColumnName = "next_id",
+                initialValue = 1,
+                allocationSize = 10)
 public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.TABLE, generator = "key_generator")
-    @TableGenerator(name = "key_generator",
-                    table = "key_gen",
-                    pkColumnName = "entity_name",
-                    pkColumnValue = "products",
-                    valueColumnName = "next_id")
     private int id;
     
     @Basic(optional = false)
@@ -27,8 +29,8 @@ public class Product {
     @Basic(optional = false)
     private BigDecimal price;
     
-    @Column(name = "expiration_date")
-    @Basic(optional = false)
+    // optional is a hint, nullable is not?
+    @Column(name = "expiration_date", nullable = false)
     private LocalDate expirationDate;
 
     public int getId() {
