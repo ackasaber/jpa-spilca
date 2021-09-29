@@ -6,9 +6,9 @@
     <persistence-unit name="postgres-unit">
         <description>Test persistence unit to connect to a development PostgreSQL database.</description>
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
-        <class>by.aveleshko.jpa.idgen.entities.Product</class>
-        <class>by.aveleshko.jpa.idgen.entities.User</class>
-        <class>by.aveleshko.jpa.idgen.entities.Event</class>
+        <class>example.jpa.idgen.entities.Product</class>
+        <class>example.jpa.idgen.entities.User</class>
+        <class>example.jpa.idgen.entities.Event</class>
         <exclude-unlisted-classes>true</exclude-unlisted-classes>
         <properties>
             <property name="jakarta.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/jpa-spilca"/>
@@ -21,7 +21,7 @@
     <persistence-unit name="mariadb-unit">
         <description>Test persistence unit to connect to a development MariaDB database.</description>
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
-        <class>by.aveleshko.jpa.idgen.entities.Part</class>
+        <class>example.jpa.idgen.entities.Part</class>
         <exclude-unlisted-classes>true</exclude-unlisted-classes>
         <properties>
             <property name="jakarta.persistence.jdbc.url" value="jdbc:mariadb://localhost:3306/jpa-spilca"/>
