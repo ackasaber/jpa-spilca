@@ -1,7 +1,7 @@
-package example.jpa06;
+package example.jpa.one2many;
 
-import example.jpa06.entities.Department;
-import example.jpa06.entities.Employee;
+import example.jpa.one2many.entities.Department;
+import example.jpa.one2many.entities.Employee;
 import example.jpaunit.JPAUnit;
 import java.util.List;
 
