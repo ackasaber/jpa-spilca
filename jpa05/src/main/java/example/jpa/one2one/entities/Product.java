@@ -15,7 +15,8 @@ import java.math.BigDecimal;
  * This entity demonstrates 1-to-1 JPA relationship between entities.
  * By default, the join column name is constructed by taking field names of
  * the column to join and separating them with the underscore: nutrition_id.
- * This default can be overriden via @JoinColumn on top of @OneToOne.
+ * This default can be overriden via {@code @JoinColumn} on top of
+ * {@code @OneToOne}.
  */
 @Entity
 @Table(name = "products")

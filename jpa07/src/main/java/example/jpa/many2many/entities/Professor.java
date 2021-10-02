@@ -14,8 +14,8 @@ import java.util.List;
  * Professor entity.
  * 
  * This entity demonstrates bi-directional many-to-many relationship in JPA.
- * The unidirectional relationship is achieved by dropping @ManyToMany field on
- * the other entity (Student in this case).
+ * The unidirectional relationship is achieved by dropping {@code @ManyToMany}
+ * field on the other entity ({@code Student} in this case).
  */
 @Entity
 @Table(name = "professors")

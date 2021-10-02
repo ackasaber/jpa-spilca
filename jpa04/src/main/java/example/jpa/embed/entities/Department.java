@@ -9,8 +9,8 @@ import jakarta.persistence.Table;
 /**
  * Department entity.
  * 
- * This entity demonstrate a composed key case via @IdClass.
- * Primary column names are defined via the usual @Column annotation.
+ * This entity demonstrate a composed key case via {@code @IdClass}.
+ * Primary column names are defined via the usual {@code @Column} annotation.
  */
 @Entity
 @Table(name = "departments")

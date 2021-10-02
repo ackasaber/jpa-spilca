@@ -9,8 +9,8 @@ import jakarta.persistence.Table;
 /**
  * Building entity.
  *
- * This entity demonstrates a composed ID case via @EmbeddedId.
- * The primary key colum name can be defined via @AttributeOverride.
+ * This entity demonstrates a composed ID case via {@code @EmbeddedId}.
+ * The primary key colum name can be defined via {@code @AttributeOverride}.
  */
 @Entity
 @Table(name = "buildings")

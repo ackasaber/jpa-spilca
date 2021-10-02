@@ -11,7 +11,7 @@ import jakarta.persistence.Table;
  * Company entity.
  * 
  * This entity demonstrates usage of embeddables.
- * Column names of an embeddable can be redefined via @AttributeOverride.
+ * Column names of an embeddable can be redefined via {@code @AttributeOverride}.
  */
 @Entity
 @Table(name = "companies")

@@ -12,7 +12,7 @@ import jakarta.persistence.Table;
  * 
  * This entity demonstrates bidirectional one-to-one mapping for the case
  * when we share the parent primary key. We have to declare the ID field
- * explicitely. The mapped parent entity is mapped via @MapsId.
+ * explicitely. The mapped parent entity is mapped via {@code @MapsId}.
  */
 @Entity
 @Table(name = "product_weight")

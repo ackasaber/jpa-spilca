@@ -11,6 +11,16 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.Table;
 
+/**
+ * Department entity.
+ *
+ * This entity demonstrates usage of embeddables that reference
+ * other entities. More often than not the default column names
+ * for such embeddables need to be overriden.
+ * Overriding non-foreign key columns is done as usual with
+ * {@code @AttributeOverride}, but overriding foreign key join column names
+ * can only be done via {@code @AssociationOverride}.
+ */
 @Entity
 @Table(name = "departments")
 public class Department {

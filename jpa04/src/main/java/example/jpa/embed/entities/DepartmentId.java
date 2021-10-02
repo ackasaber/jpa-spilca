@@ -6,8 +6,8 @@ import java.util.Objects;
 /**
  * Department ID class.
  * 
- * This class models a composite primary key class as the reference to @IdClass
- * annotation.
+ * This class models a composite primary key class as the reference to
+ * {@code @IdClass} annotation.
  * 
  * JPA composite ID classes should implement Serializable.
  * They will also need to define equals and hashCode meaningfully.

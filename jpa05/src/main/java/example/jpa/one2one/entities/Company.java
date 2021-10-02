@@ -18,8 +18,8 @@ import jakarta.persistence.Table;
  * to split the single table into several.
  * 
  * If the primary key column names of the secondary table don't match
- * those name of the primary table, they can be defined via the pkJoinColumns
- * attribute.
+ * those name of the primary table, they can be defined via
+ * the {@code pkJoinColumns} attribute.
  */
 @Entity
 @Table(name = "companies")
