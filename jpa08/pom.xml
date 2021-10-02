@@ -26,5 +26,10 @@
             <artifactId>postgresql</artifactId>
             <version>42.2.23.jre7</version>
         </dependency>
+        <dependency>
+            <groupId>example</groupId>
+            <artifactId>jpaunit</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
     </dependencies>
 </project>
