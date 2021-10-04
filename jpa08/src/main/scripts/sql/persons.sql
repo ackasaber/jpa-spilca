@@ -9,3 +9,11 @@ CREATE TABLE phones
     CONSTRAINT phones_pk PRIMARY KEY (person_id, number),
     CONSTRAINT phones_fk FOREIGN KEY (person_id)
                REFERENCES persons (id));
+
+CREATE TABLE documents
+   (person_id INTEGER,
+    number VARCHAR(20) NOT NULL,
+    reference VARCHAR(100) NOT NULL,
+    CONSTRAINT documents_pk PRIMARY KEY (person_id, number, reference),
+    CONSTRAINT documents_fk FOREIGN KEY (person_id)
+               REFERENCES persons (id));
