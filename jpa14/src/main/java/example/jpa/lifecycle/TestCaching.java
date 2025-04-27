@@ -14,7 +14,7 @@ public class TestCaching {
 
             try {
                 entityManager = factory.createEntityManager();
-                var product = entityManager.find(Product.class, 2);
+                entityManager.find(Product.class, 2);
                 
                 var cache = factory.getCache();
                 System.out.println("The product is in the cache? " +

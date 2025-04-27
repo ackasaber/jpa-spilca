@@ -14,7 +14,8 @@ import java.util.Objects;
  */
 @Embeddable
 public class BuildingId implements Serializable {
-    private String code;
+    private static final long serialVersionUID = 1L;
+	private String code;
     private int no;
 
     public String getCode() {

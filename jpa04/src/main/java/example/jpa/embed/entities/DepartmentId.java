@@ -13,7 +13,8 @@ import java.util.Objects;
  * They will also need to define equals and hashCode meaningfully.
  */
 public class DepartmentId implements Serializable {
-    private String code;
+    private static final long serialVersionUID = 1L;
+	private String code;
     private int no;
 
     public String getCode() {

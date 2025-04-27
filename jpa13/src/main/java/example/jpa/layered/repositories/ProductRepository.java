@@ -1,7 +1,6 @@
 package example.jpa.layered.repositories;
 
 import example.jpa.layered.entities.Product;
-import example.jpaunit.JPAUnit;
 import jakarta.persistence.EntityManager;
 import java.util.List;
 import java.util.Objects;
